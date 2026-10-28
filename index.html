@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chevrolet Akar | Próximamente</title>
+  <meta name="description" content="Próximamente nuevo sitio. Mientras tanto, visitanos en www.chevroletakar.com.ar">
+
+  <!-- Open Graph (Meta / Facebook / Instagram / WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chevrolet Akar | Próximamente">
+  <meta property="og:description" content="Mientras tanto, visitanos en www.chevroletakar.com.ar">
+  <meta property="og:image" content="assets/fondo-chevrolet.jpg">
+  <meta property="og:locale" content="es_AR">
+
+  <link rel="preload" as="image" href="assets/fondo-chevrolet.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: "Montserrat", Arial, sans-serif;
+      color: #fff;
+      background-color: #1a1a1a;
+      background-image: url("assets/fondo-chevrolet.jpg");
+      background-image: image-set(
+        url("assets/fondo-chevrolet.webp") type("image/webp"),
+        url("assets/fondo-chevrolet.jpg") type("image/jpeg")
+      );
+      background-size: cover;
+      background-position: center 70%;
+      background-repeat: no-repeat;
+    }
+
+    /* Pantallas horizontales: bajar el encuadre para que el auto no quede tapado por el texto */
+    @media (orientation: landscape) {
+      body { background-position: center 48%; }
+      .overlay { padding-top: 8vh; }
+    }
+
+    .overlay {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 14vh 16px 32px;
+      text-align: center;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.2) 55%,
+        rgba(0, 0, 0, 0.35) 100%
+      );
+    }
+
+    h1 {
+      font-size: clamp(2rem, 8vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .linea {
+      width: 80px;
+      height: 4px;
+      margin: 20px auto 24px;
+      background: #d1a33c; /* dorado Chevrolet */
+      border-radius: 2px;
+    }
+
+    p {
+      font-size: clamp(1rem, 3.5vw, 1.4rem);
+      font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 32px;
+      font-size: clamp(0.95rem, 3vw, 1.1rem);
+      font-weight: 600;
+      color: #1a1a1a;
+      background: #d1a33c;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .boton:hover,
+    .boton:focus-visible {
+      background: #e8bb52;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <main class="overlay">
+    <h1>PRÓXIMAMENTE</h1>
+    <div class="linea" aria-hidden="true"></div>
+    <p>Mientras, visitanos en</p>
+    <a class="boton" href="https://www.chevroletakar.com.ar" target="_blank" rel="noopener">
+      www.chevroletakar.com.ar
+    </a>
+  </main>
+</body>
+</html>
